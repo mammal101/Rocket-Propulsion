@@ -1,0 +1,187 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+ID_MENU_1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&Файл"
+    BEGIN
+        MENUITEM "&Выход",                      ID_EX
+    END
+    POPUP "&Настройки"
+    BEGIN
+        MENUITEM "&Ракета",                     ID_ROCKET
+        POPUP "Место старта"
+        BEGIN
+            MENUITEM "Меркурий",                    ID_MERC
+            MENUITEM "Венера",                      ID_VEN
+            MENUITEM "Земля",                       ID_EARTH, CHECKED
+            MENUITEM "Луна",                        ID_LUNA
+            MENUITEM "Марс",                        ID_MARS
+            MENUITEM "Юпитер",                      ID_JUP
+            MENUITEM "Сатурн",                      ID_SAT
+            MENUITEM "Уран",                        ID_URAN
+            MENUITEM "Нептун",                      ID_NEPT
+            MENUITEM "Плутон",                      ID_PLUT
+            MENUITEM SEPARATOR
+            MENUITEM "Другое",                      ID_PLANET
+        END
+    END
+    MENUITEM "&Пуск",                       ID_GO
+    MENUITEM "П&ауза",                      ID_PAUSE, GRAYED
+    MENUITEM "П&родолжение",                ID_GOON, GRAYED
+    MENUITEM "&Сброс",                      ID_RELOAD, GRAYED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_KSICON3              ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ID_D_PLANET DIALOG DISCARDABLE  100, 100, 123, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Параметры"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID1_OK,7,85,50,14
+    PUSHBUTTON      "Отмена",ID1_CANCEL,64,85,50,14
+    GROUPBOX        "Параметры места старта",IDC_STATIC,7,7,107,70
+    LTEXT           "Масса",IDC_STATIC,15,33,22,9
+    EDITTEXT        IDC_EDIT_MP_M,44,32,24,12,ES_AUTOHSCROLL
+    LTEXT           "Радиус",IDC_STATIC,13,54,27,10
+    EDITTEXT        IDC_EDIT_RP,43,52,31,12,ES_AUTOHSCROLL
+    LTEXT           " * 10",IDC_STATIC,67,34,16,8
+    EDITTEXT        IDC_EDIT_MP_P,85,26,15,12,ES_AUTOHSCROLL
+    LTEXT           "кг",IDC_STATIC,101,34,8,8
+    LTEXT           "км",IDC_STATIC,77,54,10,8
+END
+
+ID_D_ROCKET DIALOG DISCARDABLE  100, 100, 212, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Параметры ракеты"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID2_OK,38,125,50,14
+    PUSHBUTTON      "Cancel",ID2_CANCEL,139,125,50,14
+    GROUPBOX        "Параметры ракеты",IDC_STATIC,7,7,198,42
+    LTEXT           "Масса полезной нагрузки",IDC_STATIC,13,17,92,11
+    EDITTEXT        IDC_EDIT_UM,106,15,61,12,ES_AUTOHSCROLL
+    LTEXT           "т.",IDC_STATIC,169,18,8,8
+    LTEXT           "Масса топлива",IDC_STATIC,13,31,89,10
+    EDITTEXT        IDC_EDIT_FM,105,30,61,12,ES_AUTOHSCROLL
+    LTEXT           "т.",IDC_STATIC,169,31,8,8
+    GROUPBOX        "Параметры двигателя",IDC_STATIC,7,53,198,40
+    LTEXT           "Скорость выброса газов",IDC_STATIC,13,63,88,8
+    LTEXT           "Расход топлива на старте",IDC_STATIC,13,76,102,9
+    EDITTEXT        IDC_EDIT_FV,121,61,47,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FU,121,75,47,12,ES_AUTOHSCROLL
+    LTEXT           "км/с.",IDC_STATIC,171,64,20,8
+    LTEXT           "т/с.",IDC_STATIC,171,76,23,11
+    GROUPBOX        "Дополнительные параметры",IDC_STATIC,7,96,198,26
+    LTEXT           "Ограничение ускорения",IDC_STATIC,13,107,82,8
+    EDITTEXT        IDC_EDIT_ALIM,102,105,40,12,ES_AUTOHSCROLL
+    LTEXT           "м/с*с",IDC_STATIC,145,107,20,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    ID_D_PLANET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 114
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    ID_D_ROCKET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
